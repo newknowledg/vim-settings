@@ -45,4 +45,7 @@ inoremap <p> <p></p><esc>bba
 inoremap <title> <title></title><esc>bba
 
 
-
+nnoremap <S-Right> <C-w>l
+nnoremap <s-Left> <C-w>h
+nnoremap <s-Down> <C-w>j
+nnoremap <s-Up> <C-w>k
