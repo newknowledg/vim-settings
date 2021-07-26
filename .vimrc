@@ -34,6 +34,7 @@ autocmd WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&filetype
 augroup ProjectDrawer
     autocmd!
     autocmd VimEnter * :Lexplore
+    autocmd Tabnew * call feedkeys(":Lexplore\<CR>", 'n')
 augroup End 
 
 inoremap (<tab> ()<esc>ha
@@ -74,7 +75,6 @@ function! Ntab()
      let g:path=expand('%:p') 
      :q!
      execute 'tabnew' g:path 
-     :Lex
      execute "normal \<c-w>l"
 endfunction
 
